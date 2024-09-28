@@ -1,0 +1,146 @@
+/* style.css */
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo */
+    align-items: center;
+    padding: 1rem;
+    height: 70px; /* Altura um pouco maior para a logo */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container principal */
+/* Estilos gerais para o contêiner */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+/* Seções do menu */
+.menu-section {
+    margin-bottom: 2rem;
+}
+
+/* Títulos do menu */
+.menu-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e2b948;
+    cursor: pointer;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #e2b948;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+/* Itens do menu */
+.menu-items {
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    opacity: 0; /* Começa escondido */
+    max-height: 0; /* Começa colapsado */
+}
+
+/* Itens do menu ativos (visíveis) */
+.menu-items.active {
+    opacity: 1;
+    max-height: 500px; /* Altura que permite a visualização dos itens, pode ser ajustada */
+}
+
+/* Cada item do menu */
+.menu-item {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Títulos dos itens */
+.menu-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #e2b948;
+}
+
+/* Descrição dos itens */
+.menu-item p {
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+}
+
+/* Efeito ao passar o mouse sobre o item */
+.menu-item:hover {
+    background-color: #333;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #000;
+    color: #e2b948;
+    font-size: 1rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-title {
+        font-size: 1.5rem;
+    }
+    .menu-item h3 {
+        font-size: 1.2rem;
+    }
+    .menu-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
+.logo img {
+    height: 103px; /* Altura ajustada para caber no header */
+    width: auto;  /* Mantém a proporção */
+    max-width: 100%; 
+    object-fit: contain; 
+    display: block;
+    margin-right: auto;
+    margin-left: 10px;
+    margin: 0; /* Remove as margens grandes */
+    border-radius: 20px;
+}
