@@ -68,7 +68,7 @@ header {
 
 /* Efeito ao passar o mouse sobre o título */
 .menu-title:hover {
-    color: #fff; /* Altera a cor ao passar o mouse */
+    color: #e2b948; /* Altera a cor ao passar o mouse */
 }
 
 /* Itens do menu */
@@ -94,6 +94,7 @@ header {
     border-radius: 8px; /* Bordas arredondadas */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
     transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+    gap: 1rem; /* Espaçamento entre os itens */
 }
 
 /* Títulos dos itens */
@@ -184,4 +185,15 @@ footer {
     margin-left: 10px;
     margin: 0; /* Remove as margens grandes */
     border-radius: 20px;
+}
+
+
+/* Remove a barra de rolagem no Chrome, Edge e Safari */
+.menu-items::-webkit-scrollbar {
+    display: none;
+}
+
+/* Efeito ao clicar e arrastar */
+.menu-items:active {
+    cursor: grabbing;
 }

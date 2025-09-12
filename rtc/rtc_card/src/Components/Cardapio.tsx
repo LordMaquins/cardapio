@@ -27,14 +27,61 @@ const Cardapio: React.FC = () => {
           </h2>
           <div className={`menu-items ${showBebidasMenu ? 'active' : ''}`} id="bebidas-menu">
             <div className="menu-item">
-              <h3>Brahma......................................10,50</h3>
-              <p>600ml</p>
-              <p>1 Litro</p>
+              <h3>Brahma</h3>
+              <p>600ml ......................................10,50</p>
+              <p>1 Litro ......................................12,00</p>
+            </div>  
+            <div className="menu-item">
+              <h3>Skol</h3>
+              <p>600ml ......................................10,00</p>
+              <p>1 Litro ......................................12,00 </p>
             </div>
             <div className="menu-item">
-              <h3>Skol......................................10,00</h3>
-              <p>1 Litro</p>
-              <p>600ml</p>
+              <h3>Subzero</h3>
+              <p>600ml ......................................10,00</p>
+              <p>1 Litro ......................................12,00</p>
+            </div> 
+            <div className="menu-item">
+              <h3>Amstel</h3>
+              <p>600ml ......................................10,00</p>
+              <p>1 Litro ......................................12,00</p>
+            </div> 
+            <div className="menu-item">
+              <h3>Moinho</h3>
+              <p>600ml ......................................10,00</p>
+              <p>1 Litro ......................................11,00</p>
+            </div> 
+            <div className="menu-item">
+              <h3>Stella</h3>
+              <p>600ml ......................................12,00</p>
+            </div> 
+            <div className="menu-item">
+              <h3>Original</h3>
+              <p>600ml ......................................12,00</p>
+            </div> 
+            <div className="menu-item">
+              <h3>Heineken</h3>
+              <p>600ml ......................................14,00</p>
+            </div> 
+            <div className="menu-item">
+              <h3>Spaten</h3>
+              <p>600ml ......................................11,00</p>
+            </div>
+            <div className="menu-item">
+              <h3>Brahma Duplo Malte</h3>
+              <p>600ml ......................................11,00</p>
+            </div>
+            <div className="menu-item">
+              <h3>Império</h3>
+              <p>600ml ......................................10,00</p>
+            </div>
+            <div className="menu-item">
+              <h3>Petra</h3>
+              <p>600ml ......................................8,00</p>
+            </div>
+            <div className="menu-item">
+              <h3>Budweiser</h3>
+              <p>1 Litro ......................................12,00</p>
             </div>
             {/* Continue com os outros itens */}
           </div>
@@ -47,12 +94,18 @@ const Cardapio: React.FC = () => {
           <div className={`menu-items ${showComidasMenu ? 'active' : ''}`} id="comidas-menu">
             <div className="menu-item">
               <h3>Coxinha......................................24,00</h3>
-              <p>Deliciosas coxinhas 12 unidades.</p>
-              <p>Escolha entre Carne ou Frango</p>
+              <p> 12 unidades.</p>
+              <p> Carne ou Frango</p>
             </div>
             <div className="menu-item">
               <h3>Frango a Passarinho......................................45,00</h3>
-              <p>Asinhas de Frango temperadas, e fritas ao ponto crocante.</p>
+            </div>
+            <div className="menu-item">
+              <h3>Panceta......................................30,00</h3>
+            </div>
+            <div className="menu-item">
+              <h3>Frango Crocante......................................65,00 
+              </h3>
             </div>
             {/* Continue com os outros itens */}
           </div>
