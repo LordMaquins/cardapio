@@ -15,7 +15,7 @@ const Cardapio: React.FC = () => {
   return (
     <div>
       <header>
-        <div className="logo"><img src="./img/Logo_maninhos.jpg" /></div>
+        <div className="logo"><img src="./public/Logo_maninhos.jpg" /></div>
         <div className="nav-links">
         </div>
       </header>
