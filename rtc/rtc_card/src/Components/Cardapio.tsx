@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import './style.css'; // Certifique-se de que o CSS seja importado corretamente
 
 const Cardapio: React.FC = () => {
-  const [showBebidasMenu, setShowBebidasMenu] = useState(false);
-  const [showComidasMenu, setShowComidasMenu] = useState(false);
-  const [showDrinksMenu, setShowDrinksMenu] = useState(false);
+const [showBebidasMenu, setShowBebidasMenu] = useState(true);
+const [showComidasMenu, setShowComidasMenu] = useState(true);
+const [showDrinksMenu, setShowDrinksMenu] = useState(true);
 
   const toggleMenu = (menu: string) => {
     if (menu === 'bebidas') setShowBebidasMenu(!showBebidasMenu);
@@ -15,7 +15,7 @@ const Cardapio: React.FC = () => {
   return (
     <div>
       <header>
-        <div className="logo"><img src="./public/Logo_maninhos.jpg" /></div>
+        <div className="logo"><img src="/Logo_maninhos.jpg" /></div>
         <div className="nav-links">
         </div>
       </header>

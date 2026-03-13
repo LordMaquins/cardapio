@@ -72,17 +72,35 @@ header {
 }
 
 /* Itens do menu */
+/* Itens do menu - visível por padrão */
 .menu-items {
-    overflow: hidden; /* Oculta itens que ultrapassam o limite */
-    transition: all 0.3s ease-in-out; /* Transição suave */
-    opacity: 0; /* Começa escondido */
-    max-height: 0; /* Começa colapsado */
+    overflow-y: auto; /* Scroll vertical */
+    max-height: 600px; /* Altura máxima antes do scroll */
+    transition: all 0.3s ease-in-out;
+    opacity: 1; /* Visível por padrão */
+    padding-right: 4px; /* Espaço para a scrollbar */
 }
 
-/* Itens do menu ativos (visíveis) */
-.menu-items.active {
-    opacity: 1; /* Torna visível */
-    max-height: 500px; /* Altura que permite a visualização dos itens, pode ser ajustada */
+/* Itens do menu colapsados (ao clicar) */
+.menu-items:not(.active) {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+}
+
+/* Scrollbar personalizada */
+.menu-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+.menu-items::-webkit-scrollbar-track {
+    background: #111;
+    border-radius: 4px;
+}
+
+.menu-items::-webkit-scrollbar-thumb {
+    background: #e2b948;
+    border-radius: 4px;
 }
 
 /* Cada item do menu */
