@@ -1,4 +1,16 @@
 /* style.css */
+/* =========================================
+   0. RESET GLOBAL (CORRIGE A FAIXA PRETA)
+   ========================================= */
+*, *::before, *::after {
+    box-sizing: border-box; /* Impede que padding aumente a largura total dos elementos */
+}
+
+html, body {
+    overflow-x: hidden; /* Bloqueia qualquer rolagem horizontal acidental */
+    width: 100%;
+    max-width: 100vw;
+}
 
 /* =========================================
    1. ESTILOS GLOBAIS E BASE (MOBILE FIRST)
