@@ -1,217 +1,211 @@
 /* style.css */
 
-/* Estilos globais */
+/* =========================================
+   1. ESTILOS GLOBAIS E BASE (MOBILE FIRST)
+   ========================================= */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Espaço para o header fixo não cobrir o conteúdo */
     background-color: #f9f9f9;
 }
 
+/* =========================================
+   2. CABEÇALHO E NAVEGAÇÃO
+   ========================================= */
 header {
     background-color: #000;
     color: white;
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo */
+    flex-direction: column; /* Empilha logo e menu no mobile */
+    justify-content: center;
     align-items: center;
-    padding: 1rem;
-    height: 70px; /* Altura um pouco maior para a logo */
+    padding: 0.5rem;
+    min-height: 70px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.logo img {
+    height: 60px; /* Menor no mobile para não ocupar tanta tela */
+    width: auto;
+    object-fit: contain;
+    border-radius: 12px;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os links quebrem linha se faltar espaço */
+    justify-content: center;
+    gap: 10px;
 }
 
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin: 0 1rem;
-    font-size: 1.2rem;
+    font-size: 1rem; /* Fonte confortável para toque */
+    padding: 0.2rem 0.5rem;
 }
 
 .nav-links a:hover {
     text-decoration: underline;
+    color: #e2b948;
 }
 
-/* Container principal */
-/* Estilos gerais para o contêiner */
-/* Estilos gerais para o contêiner */
+/* =========================================
+   3. CONTAINER PRINCIPAL
+   ========================================= */
 .container {
-    max-width: 1200px; /* Largura máxima do contêiner */
-    margin: 0 auto; /* Centraliza o contêiner */
-    padding: 2rem; /* Espaçamento interno */
-    font-family: Arial, sans-serif; /* Fonte do documento */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 0; /* Menos espaçamento no mobile */
 }
 
-/* Seções do menu */
+/* =========================================
+   4. SEÇÕES E ITENS DO MENU (SEMPRE ABERTOS)
+   ========================================= */
 .menu-section {
-    margin-bottom: 2rem; /* Espaçamento entre as seções */
+    margin-bottom: 2rem; /* Aumentado um pouco o espaço entre as seções */
 }
 
-/* Títulos do menu */
 .menu-title {
-    font-size: 2rem; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    color: #e2b948; /* Cor do título */
-    cursor: pointer; /* Indica que é clicável */
-    text-align: center; /* Centraliza o texto */
-    padding: 0.5rem 0; /* Espaçamento interno */
-    border-bottom: 2px solid #e2b948; /* Linha abaixo do título */
-    margin-bottom: 1rem; /* Espaçamento abaixo do título */
-    transition: color 0.3s ease; /* Transição suave para a cor */
+    font-size: 1.5rem; /* Tamanho mobile */
+    font-weight: bold;
+    color: #e2b948;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-bottom: 2px solid #e2b948;
+    margin-bottom: 1.5rem;
 }
 
-/* Efeito ao passar o mouse sobre o título */
-.menu-title:hover {
-    color: #e2b948; /* Altera a cor ao passar o mouse */
-}
-
-/* Itens do menu */
-/* Itens do menu - visível por padrão */
 .menu-items {
-    overflow-y: auto; /* Scroll vertical */
-    max-height: 600px; /* Altura máxima antes do scroll */
-    transition: all 0.3s ease-in-out;
-    opacity: 1; /* Visível por padrão */
-    padding-right: 4px; /* Espaço para a scrollbar */
+    /* Container agora é simples, exibe tudo sem scroll interno */
+    display: block; 
 }
 
-/* Itens do menu colapsados (ao clicar) */
-.menu-items:not(.active) {
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-}
-
-/* Scrollbar personalizada */
-.menu-items::-webkit-scrollbar {
-    width: 6px;
-}
-
-.menu-items::-webkit-scrollbar-track {
-    background: #111;
-    border-radius: 4px;
-}
-
-.menu-items::-webkit-scrollbar-thumb {
-    background: #e2b948;
-    border-radius: 4px;
-}
-
-/* Cada item do menu */
 .menu-item {
-    background-color: #222; /* Cor de fundo */
-    color: #fff; /* Cor do texto */
-    padding: 1rem; /* Espaçamento interno */
-    margin-bottom: 1rem; /* Espaçamento entre os itens */
-    border-radius: 8px; /* Bordas arredondadas */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
-    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
-    gap: 1rem; /* Espaçamento entre os itens */
+    background-color: #222;
+    color: #fff;
+    padding: 1.2rem; /* Um pouco mais de respiro interno */
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
 }
 
-/* Títulos dos itens */
+.menu-item:active {
+    background-color: #333; /* Feedback visual no toque (mobile) */
+}
+
 .menu-item h3 {
-    margin: 0; /* Remove margens */
-    font-size: 1.5rem; /* Tamanho do título */
-    color: #e2b948; /* Cor do título do item */
+    margin: 0;
+    font-size: 1.2rem; /* Tamanho mobile */
+    color: #e2b948;
 }
 
-/* Descrição dos itens */
 .menu-item p {
-    margin: 0.5rem 0 0; /* Espaçamento entre as linhas */
-    font-size: 1rem; /* Tamanho do texto */
+    margin: 0.5rem 0 0;
+    font-size: 0.95rem; /* Tamanho mobile */
+    line-height: 1.5;
 }
 
-/* Efeito ao passar o mouse sobre o item */
-.menu-item:hover {
-    background-color: #333; /* Altera a cor ao passar o mouse */
-}
-
-/* Rodapé */
+/* =========================================
+   5. RODAPÉ
+   ========================================= */
 footer {
-    text-align: center; /* Centraliza o texto */
-    padding: 2rem 0; /* Espaçamento interno */
-    background-color: #000; /* Cor de fundo */
-    color: #e2b948; /* Cor do texto */
-    font-size: 1rem; /* Tamanho da fonte */
-    border-radius: 8px; /* Bordas arredondadas */
-    margin-top: 2rem; /* Espaçamento acima do rodapé */
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: #000;
+    color: #e2b948;
+    font-size: 0.9rem;
+    margin-top: 2rem;
 }
 
-/* Responsividade */
-@media (max-width: 1200px) {
+/* =========================================
+   6. RESPONSIVIDADE (TABLETS E DESKTOPS)
+   ========================================= */
+
+/* Tablets (telas a partir de 768px) */
+@media (min-width: 768px) {
+    body {
+        padding-top: 100px; /* Ajusta o topo para o header maior */
+    }
+
+    header {
+        flex-direction: row; /* Coloca logo e links lado a lado */
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .logo img {
+        height: 80px; /* Aumenta a logo no tablet */
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .nav-links a {
+        font-size: 1.1rem;
+    }
+
+    .menu-title {
+        font-size: 1.8rem;
+    }
+
+    .menu-item h3 {
+        font-size: 1.4rem;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Desktops (telas a partir de 1024px) */
+@media (min-width: 1024px) {
+    body {
+        padding-top: 120px;
+    }
+
+    .logo img {
+        height: 103px; /* Tamanho original da sua logo */
+    }
+
     .container {
-        padding: 1rem; /* Menos espaçamento em telas menores */
+        padding: 2rem;
     }
-    
+
+    .nav-links a {
+        font-size: 1.2rem;
+        margin: 0 1rem;
+    }
+
     .menu-title {
-        font-size: 1.8rem; /* Tamanho menor para títulos */
+        font-size: 2rem;
     }
-    
+
     .menu-item h3 {
-        font-size: 1.4rem; /* Tamanho menor para títulos de itens */
+        font-size: 1.5rem;
     }
-    
-    .menu-item p {
-        font-size: 0.9rem; /* Tamanho menor para descrições */
+
+    .menu-item:hover {
+        background-color: #333; /* Efeito hover tradicional para mouse */
     }
-}
-
-@media (max-width: 768px) {
-    .menu-title {
-        font-size: 1.5rem; /* Tamanho menor para títulos */
-    }
-    
-    .menu-item h3 {
-        font-size: 1.2rem; /* Tamanho menor para títulos de itens */
-    }
-    
-    .menu-item p {
-        font-size: 0.8rem; /* Tamanho menor para descrições */
-    }
-}
-
-@media (max-width: 480px) {
-    .menu-title {
-        font-size: 1.2rem; /* Tamanho ainda menor para títulos */
-    }
-    
-    .menu-item h3 {
-        font-size: 1rem; /* Tamanho ainda menor para títulos de itens */
-    }
-    
-    .menu-item p {
-        font-size: 0.7rem; /* Tamanho ainda menor para descrições */
-    }
-}
-
-
-
-.logo img {
-    height: 103px; /* Altura ajustada para caber no header */
-    width: auto;  /* Mantém a proporção */
-    max-width: 100%; 
-    object-fit: contain; 
-    display: block;
-    margin-right: auto;
-    margin-left: 10px;
-    margin: 0; /* Remove as margens grandes */
-    border-radius: 20px;
-}
-
-
-/* Remove a barra de rolagem no Chrome, Edge e Safari */
-.menu-items::-webkit-scrollbar {
-    display: none;
-}
-
-/* Efeito ao clicar e arrastar */
-.menu-items:active {
-    cursor: grabbing;
 }

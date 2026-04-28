@@ -37,8 +37,9 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <p>1L ......................................13,00 </p>
             </div>
             <div className="menu-item">
-              <h3>SUBZERO</h3>
+              <h3>BOA</h3>
               <p>600ml ......................................11,00</p>
+              <p>1L ......................................13,00</p>
             </div> 
             <div className="menu-item">
               <h3>AMSTEL</h3>
@@ -83,7 +84,7 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
           </h2>
           <div className={`menu-items ${showComidasMenu ? 'active' : ''}`} id="comidas-menu">
             <div className="menu-item">
-              <h3>COXINHA......................................28,00</h3>
+              <h3>COXINHA......................................30,00</h3>
               <p> 12 UNIDADES</p>
               <p> CARNE ou FRANGO</p>
             </div>
@@ -92,7 +93,7 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <p>1 KG</p>
             </div>
             <div className="menu-item">
-              <h3>PANCETA......................................35,00</h3>
+              <h3>PANCETA......................................37,00</h3>
               <p>500G</p>
             </div>
             <div className="menu-item">
@@ -100,7 +101,7 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <p>500G</p>
             </div>
             <div className="menu-item">
-              <h3>PASTELZINHO QUEJIO c/REQUEIJÃO......................................30,00 </h3>
+              <h3>PASTELZINHO QUEJIO c/REQUEIJÃO......................................32,00 </h3>
               <p>24 UNIDADES</p>
             </div>
             <div className="menu-item">
@@ -108,7 +109,7 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <p>6 UNIDADES</p>
             </div>
             <div className="menu-item">
-              <h3>BOLINHO DE LINGUIÇA......................................30,00 </h3>
+              <h3>BOLINHO DE LINGUIÇA......................................35,00 </h3>
               <p>10 UNIDADES</p>
             </div>
             <div className="menu-item">
@@ -120,16 +121,22 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <p>500G</p>
             </div>
             <div className="menu-item">
-              <h3>BOLINHA DE QUEIJO......................................28,00 </h3>
+              <h3>BOLINHA DE QUEIJO......................................30,00 </h3>
               <p>12 UNIDADES</p>
             </div>
             <div className="menu-item">
-              <h3>RISOLES......................................30,00 </h3>
+              <h3>RISOLES......................................32,00 </h3>
               <p>12 UNIDADES</p>
             </div>
             <div className="menu-item">
-              <h3>KIBE......................................28,00 </h3>
+              <h3>KIBE......................................30,00 </h3>
               <p>12 UNIDADES</p>
+            </div>
+                     <div className="menu-item">
+              <h3>MANDIOCA FRITA......................................15,00 </h3>
+            </div>
+                        <div className="menu-item">
+              <h3>MAJUBINHA......................................40,00 </h3>
             </div>
           </div>
         </div>
@@ -146,10 +153,10 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <h3>QUEIJO......................................................15,00</h3>
             </div>
             <div className="menu-item">
-              <h3>PIZZA.........................................................15,00</h3>
+              <h3>PIZZA.........................................................17,00</h3>
             </div>
              <div className="menu-item">
-              <h3>CARNE c/QUEIJO.....................................15,00</h3>
+              <h3>CARNE c/QUEIJO.....................................17,00</h3>
             </div>
           </div>
         </div>
@@ -160,16 +167,16 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
           </h2>
           <div className={`menu-items ${showDrinksMenu ? 'active' : ''}`} id="drinks-menu">
             <div className="menu-item">
-              <h3>CAIPIRINHA LIMÃO c/ VELHO BARREIRO................................................15,00</h3>
+              <h3>CAIPIRINHA LIMÃO c/ VELHO BARREIRO................................................18,00</h3>
             </div>
             <div className="menu-item">
-              <h3>CAIPIRINHA LIMÃO c/ VODKA......................................................18,00</h3>
+              <h3>CAIPIRINHA LIMÃO c/ VODKA......................................................20,00</h3>
             </div>
             <div className="menu-item">
-              <h3>CAIPIRINHA MORANGO c/ YAKULT.....................................................18,00</h3>
+              <h3>CAIPIRINHA MORANGO c/ YAKULT.....................................................25,00</h3>
             </div>
              <div className="menu-item">
-              <h3>CAIPIRINHA TANGERINA c/ PIMENTA..................................................18,00</h3>
+              <h3>CAIPIRINHA TANGERINA c/ PIMENTA..................................................20,00</h3>
             </div>
           </div>
         </div>
@@ -183,8 +190,8 @@ const [showDrinksMenu, setShowDrinksMenu] = useState(true);
               <h3>COCA-COLA</h3>
               <p>290ML .................................................5,00</p>
               <p>350ML .................................................6,00</p>
-              <p>600ML .................................................7,00</p>
-              <p>1L ........................................................8,00</p>
+              <p>600ML .................................................8,00</p>
+              <p>1L ........................................................9,00</p>
               <p>2L ........................................................12,00</p>
             </div>
             <div className="menu-item">
